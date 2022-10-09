@@ -1,0 +1,12 @@
+<div uni-panel="{type:'modal', size:'md', level:'info'}">
+    <header i18n="new,cuenta">
+        Consultar Saldo
+    </header>
+    <form name="formNew" uni-validator="">
+        <div replace="{_cuentaItem: 'data.current'}" uni-part="part.consultar"></div>
+    </form>
+    <footer>
+        <a ng-click="action.cancel('consultar')" uni-badge="" uni-confirm="cancel">Cancelar</a>
+    </footer>
+</div> 
+

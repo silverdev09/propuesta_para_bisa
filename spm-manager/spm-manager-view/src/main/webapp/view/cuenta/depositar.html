@@ -1,0 +1,16 @@
+
+<div ng-init="action.listarCuentaSimple()">
+   <div uni-panel="{type:'modal', size:'md', level:'primary'}">
+    <header i18n="new,cuenta">
+        Depositar Dinero
+    </header>
+    <form name="formNew" uni-validator="">
+        <div replace="{_transaccionItem: 'data.transaccion'}" uni-part="part.depositar"></div>
+    </form>
+    <footer>
+        <a ng-click="action.cancel('depositar')" uni-badge="" uni-confirm="cancel">Cancelar</a>
+        <button ng-click="formNew.$validate() && action.depositar()" uni-badge="" uni-confirm="create">Depositar</button>
+    </footer>
+</div> 
+</div>
+

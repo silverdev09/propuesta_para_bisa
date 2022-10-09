@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.propuesta.spm</groupId>
+        <artifactId>spm-manager</artifactId>
+        <version>1.0.0</version>
+    </parent>
+    <artifactId>spm-manager-serv</artifactId>
+    <version>1.0.0.0</version>
+    <name>propuesta-spm-manager-serv</name>
+    <description>spm manager services</description>
+    <dependencies>
+        <dependency>
+            <groupId>bo.union.framework</groupId>
+            <artifactId>framework-api</artifactId>
+            <version>${framework-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+</project>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.propuesta.spm</groupId>
+        <artifactId>spm-manager</artifactId>
+        <version>1.0.0</version>
+    </parent>
+    <artifactId>spm-manager-view</artifactId>
+    <version>1.0.0.1</version>
+    <packaging>war</packaging>
+    <name>propuesta-spm-manager-view</name>
+    <description>spm manager views</description>
+    <dependencies>
+        <dependency>
+            <groupId>bo.union.framework</groupId>
+            <artifactId>framework-web-api</artifactId>
+            <version>${framework-web-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.propuesta.spm</groupId>
+            <artifactId>spm-manager-impl</artifactId>
+            <version>${propuesta-spm-manager-impl.version}</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>${wildfly.version}</version>
+                <executions>
+                    <execution>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>undeploy</goal>
+                            <goal>deploy</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <skip>${wildfly.skip}</skip>
+                    <port>${wildfly.port}</port>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

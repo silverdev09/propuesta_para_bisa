@@ -1,0 +1,17 @@
+<div uni-grid="{cols:[2,4]}">
+    <label i18n="Cuenta">Cuenta</label>
+    <select ng-model="_transaccionItem.idCuenta"
+            uni-select=""
+            uni-option="data.listCuentaSimple"
+            required>
+    </select>
+    <label i18n="monto">Monto a retirar</label>
+    <input uni-input ng-model="_transaccionItem.monto" type = "number" required>
+    <label i18n="moneda">Moneda</label>
+    <select ng-model="_transaccionItem.moneda"
+            uni-select=""
+            required>
+        <option value="BOLIVIANOS">BOLIVIANOS</option>
+        <option value="DOLARES">DOLARES</option>
+    </select>    
+</div><br>

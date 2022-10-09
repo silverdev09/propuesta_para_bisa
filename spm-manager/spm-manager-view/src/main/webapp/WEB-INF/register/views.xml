@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<views trace="6c8ed788fa70618fd9c8dfce76aab1cb">
+    <view id="cuenta" path="/cuenta">
+        <page>/view/cuenta.html</page>
+        <description>Administrador de cuentas</description>
+        <java>com.propuesta.spm.manager.rest.CuentaRest</java>
+        <script src="/ctrl/cuenta.js">The code: /ctrl/cuenta.js REQUIRED a comment header</script>
+        <service src="/rest/cuenta/listar/cuenta">** The method 'listarCuenta()' for @Path('listar/cuenta') service requires a description **</service>
+        <service src="/rest/cuenta/listar/cuenta/simple">** The method 'listarCuentaSimple()' for @Path('listar/cuenta/simple') service requires a description **</service>
+        <service src="/rest/cuenta/crear">** The method 'crearCuenta(Cuenta)' for @Path('crear') service requires a description **</service>
+        <service src="/rest/cuenta/retirar">** The method 'retirar(Transaccion)' for @Path('retirar') service requires a description **</service>
+        <service src="/rest/cuenta/depositar">** The method 'depositar(Transaccion)' for @Path('depositar') service requires a description **</service>
+        <service src="/rest/cuenta/historico">** The method 'historico(Cuenta)' for @Path('historico') service requires a description **</service>
+        <service src="/rest/cuenta/consultar">** The method 'consultar(Cuenta)' for @Path('consultar') service requires a description **</service>
+    </view>
+</views>

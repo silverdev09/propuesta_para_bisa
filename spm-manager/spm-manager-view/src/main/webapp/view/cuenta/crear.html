@@ -1,0 +1,12 @@
+<div uni-panel="{type:'modal', size:'md', level:'primary'}">
+    <header i18n="new,cuenta">
+        Crear Cuenta
+    </header>
+    <form name="formNew" uni-validator="">
+        <div replace="{_cuentaItem: 'data.current', _evento:'crear'}" uni-part="part.form"></div>
+    </form>
+    <footer>
+        <a ng-click="action.cancel('crear')" uni-badge="" uni-confirm="cancel">Cancelar</a>
+        <button ng-click="formNew.$validate() && action.create()" uni-badge="" uni-confirm="create">Guardar</button>
+    </footer>
+</div>

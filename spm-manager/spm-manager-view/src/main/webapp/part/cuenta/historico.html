@@ -1,0 +1,20 @@
+<table uni-table="{select: '_toggle', selected: '_in'}">
+    <thead>
+        <tr>
+            <th i18n="idTransaccion" width="10%">ID Trans.</th>
+            <th i18n="fecha">Fecha</th>
+            <th i18n="tipoTransaccion">Tipo trans.</th>
+            <th i18n="monto">Monto</th>
+            <th i18n="moneda">Moneda</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="row in _transaccionList">
+            <td>{{row.idTransaccion}}</td>
+            <td>{{row.fecha|date:'dd/MM/yyyy'}}</td>
+            <td>{{row.tipoTransaccion}}</td>
+            <td>{{row.monto}}</td>
+            <td>{{row.moneda}}</td>
+        </tr>
+    </tbody>
+</table>

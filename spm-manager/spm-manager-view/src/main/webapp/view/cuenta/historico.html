@@ -1,0 +1,13 @@
+
+<div ng-init="action.historico()">
+    <div uni-panel="{type:'modal', size:'md', level:'info'}">
+        <header i18n="info,pedido">
+            Histórico de transacciones de la cuenta {{data.current.numeroCuenta}}
+        </header>
+        <div replace="{_transaccionList: 'data.listTransaccion'}" uni-part="part.historico"></div>
+        <footer>
+            <a ng-click="action.cancel('historico')" uni-badge="">Cancelar</a>
+        </footer>
+    </div>
+</div>
+

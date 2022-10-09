@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<menu trace="60af660558f006eae1383bda2b37ac40">
+    <label>Administrador Cuentas</label>
+    <description>administrador</description>
+    <item id="1" type="LINK" mode="CONTENT">
+        <label>Cuentas</label>
+        <description>cuentas **</description>
+        <target type="VIEW">cuenta</target>
+    </item>
+</menu>

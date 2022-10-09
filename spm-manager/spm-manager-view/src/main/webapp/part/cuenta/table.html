@@ -1,0 +1,18 @@
+<table uni-table="{select: '_toggle', selected: '_in'}">
+    <thead>
+        <tr>
+            <th i18n="idCuenta" width="10%">ID Cuenta</th>
+            <th i18n="titular">Titular</th>
+            <th i18n="numeroCuenta">Número cuenta</th>
+            <th i18n="estado">Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="row in _cuentaList">
+            <td>{{row.idCuenta}}</td>
+            <td>{{row.titular}}</td>
+            <td>{{row.numeroCuenta}}</td>
+            <td>{{row.estado}}</td>
+        </tr>
+    </tbody>
+</table>

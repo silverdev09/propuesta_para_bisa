@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<build>
+    <branch>refs/heads/sipaco/1.0.x</branch>
+    <source>http://scm.internal.union:8080/scm/git/baking-reporting</source>
+    <hash>3d4bcf87f1da029d7191b97068f1bd621c0fd865</hash>
+    <user>sipaco</user>
+    <time>2022-10-08 22:03:04.195</time>
+    <name>spm-model-1.0.0</name>
+    <message>Basic information from info.json</message>
+</build>

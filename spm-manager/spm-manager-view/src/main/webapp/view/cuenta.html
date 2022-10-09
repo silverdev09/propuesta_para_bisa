@@ -1,0 +1,21 @@
+
+<div ng-controller="spm$cuenta">
+        <div ng-include="view.inbox">
+            Cargando Inbox
+        </div>
+        <div ng-if="panel.if('crear')" ng-include="view.crear">
+            Cargando Crear
+        </div>
+        <div ng-if="panel.if('depositar')" ng-include="view.depositar">
+            Cargando Depositar
+        </div>
+        <div ng-if="panel.if('retirar')" ng-include="view.retirar">
+            Cargando Retirar
+        </div>
+        <div ng-if="panel.if('consultar')" ng-include="view.consultar">
+            Cargando Consultar
+        </div>
+        <div ng-if="panel.if('historico')" ng-include="view.historico">
+            Cargando Historico
+        </div>
+</div>

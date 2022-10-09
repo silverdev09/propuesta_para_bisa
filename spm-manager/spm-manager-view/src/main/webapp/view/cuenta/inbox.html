@@ -1,0 +1,12 @@
+
+<div click-apply="filter.apply()" click-clear="filter.clear()" config="data.filter.$config" uni-pager="">
+    <div replace="{_pedidoFilter: 'data.filter'}" uni-part="part.filter"></div>
+</div>
+<div uni-action="">
+    <button ng-click="action.open('crear')">Crear cuenta</button>
+    <button ng-click="action.open('depositar')">Depositar dinero</button>
+    <button ng-click="action.open('retirar')">Retirar dinero</button>
+    <button ng-click="action.open('consultar')" ng-disabled="!table.isOneSelect()">Consultar Saldo</button>
+    <button ng-click="action.open('historico')" ng-disabled="!table.isOneSelect()">Ver histórico de transacciones</button>
+</div>
+<div replace="{_cuentaList: 'data.list', _toggle: 'table.toggle', _in: 'table.in'}" uni-part="part.table"></div>

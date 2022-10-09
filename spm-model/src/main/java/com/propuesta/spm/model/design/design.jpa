@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<entity-mappings ptype="MONOLITH" ppkg="com.propuesta.spm.model.entity" epkg="domain" v="5.4.2" rws="_16499091814822" Pws="_16499091814822" cws="_16499091814822" persistenceUnitName="DEFAULT_PU" sm="false" xs="false" id="_16499091814811" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <entity cacheable="false" compositePrimaryKeyClass="SpmCuentaPK" abs="false" class="SpmCuenta" v="true" jbn="false" xre="false" m="false" rootElement="_16499091814811" id="_1665262354976106">
+        <ext e="true" n="java.io.Serializable"/>
+        <ath>sipaco</ath>
+        <attributes>
+            <basic attribute-type="String" v="true" xvt="" name="titular" id="_1665262518406112">
+                <xwm/>
+                <xm/>
+                <column name="TITULAR" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </basic>
+            <basic attribute-type="String" v="true" xvt="" name="numeroCuenta" id="_1665262518567113">
+                <xwm/>
+                <xm/>
+                <column name="NUMERO_CUENTA" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </basic>
+            <basic attribute-type="Long" v="true" xvt="" name="saldo" id="_1665262518730114">
+                <xwm/>
+                <xm/>
+                <column name="SALDO" unique="false" nullable="true" insertable="true" updatable="true" precision="0"/>
+            </basic>
+            <basic attribute-type="String" v="true" xvt="" name="moneda" id="_1665262518907115">
+                <xwm/>
+                <xm/>
+                <column name="MONEDA" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </basic>
+            <basic attribute-type="String" v="true" xvt="" name="estado" id="_1665262519105116">
+                <xwm/>
+                <xm/>
+                <column name="ESTADO" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </basic>
+            <basic attribute-type="String" v="true" xvt="" name="retiroMontoSuperior" pname="attribute" id="_1665275562432150">
+                <xwm/>
+                <xm/>
+                <column name="RETIRO_MONTO_SUPERIOR" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </basic>
+            <id attribute-type="Long" v="true" xvt="" name="idCuenta" id="_1665262354976107">
+                <xwm/>
+                <xm/>
+                <column name="ID_CUENTA" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <generated-value strategy="SEQUENCE" generator="SPM_SEC_CUENTA"/>
+                <sequence-generator name="SPM_SEC_CUENTA" sequence-name="SPM_SEC_CUENTA" catalog="" schema="" initial-value="1" allocation-size="50"/>
+            </id>
+        </attributes>
+        <nq e="false" name="SpmCuenta.findByRetiroMontoSuperior">
+            <query>Select s from SpmCuenta s where s.retiroMontoSuperior=:retiroMontoSuperior</query>
+        </nq>
+        <table name="SPM_CUENTA"/>
+    </entity>
+    <entity cacheable="false" compositePrimaryKeyClass="SpmTransaccionPK" abs="false" class="SpmTransaccion" v="true" jbn="false" xre="false" m="false" rootElement="_16499091814811" id="_1665262478854109">
+        <ext e="true" n="java.io.Serializable"/>
+        <ath>sipaco</ath>
+        <attributes>
+            <basic attribute-type="Long" v="true" xvt="" name="monto" id="_1665262800902117">
+                <xwm/>
+                <xm/>
+                <column name="MONTO" unique="false" nullable="true" insertable="true" updatable="true" precision="0"/>
+            </basic>
+            <basic attribute-type="String" v="true" xvt="" name="moneda" id="_1665262801078118">
+                <xwm/>
+                <xm/>
+                <column name="MONEDA" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </basic>
+            <basic attribute-type="java.util.Date" v="true" xvt="" name="fecha" id="_1665262801253119">
+                <xwm/>
+                <xm/>
+                <temporal>DATE</temporal>
+                <column name="FECHA" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </basic>
+            <basic attribute-type="String" v="true" xvt="" name="tipoTransaccion" id="_1665262801439120">
+                <xwm/>
+                <xm/>
+                <column name="TIPO_TRANSACCION" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </basic>
+            <many-to-one optional="true" primaryKey="false" connected-entity-id="_1665262354976106" v="true" xvt="" name="spmCuenta" id="_1665262975556124">
+                <xwm/>
+                <xm/>
+                <join-column name="ID_CUENTA" rc="" unique="false" nullable="true" insertable="true" updatable="true" column-definition="" table=""/>
+            </many-to-one>
+            <id attribute-type="Long" v="true" xvt="" name="idTransaccion" id="_1665262478854110">
+                <xwm/>
+                <xm/>
+                <column name="ID_TRANSACCION" unique="false" nullable="true" insertable="true" updatable="true"/>
+                <generated-value strategy="SEQUENCE" generator="SPM_SEC_TRANSACCION"/>
+                <sequence-generator name="SPM_SEC_TRANSACCION" sequence-name="SPM_SEC_TRANSACCION" catalog="" schema="" initial-value="1" allocation-size="50"/>
+            </id>
+        </attributes>
+        <table name="SPM_TRANSACCION"/>
+    </entity>
+    <c>
+        <ct>java.util.List</ct>
+        <ct>java.util.Set</ct>
+        <ct>java.util.Map</ct>
+        <ct>java.util.Collection</ct>
+        <cit>java.util.ArrayList</cit>
+        <cit>java.util.LinkedList</cit>
+        <cit>java.util.HashSet</cit>
+        <cit>java.util.TreeSet</cit>
+        <cit>java.util.HashMap</cit>
+    </c>
+    <wsl>
+        <ws n="Main" id="_16499091814822">
+            <i ref="_1665262478854109" x="437" y="85"/>
+            <i ref="_1665262354976106" x="106" y="85"/>
+        </ws>
+    </wsl>
+</entity-mappings>

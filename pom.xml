@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.propuesta.spm</groupId>
+    <artifactId>spm</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+    <name>propuesta-spm</name>
+    <description>Proyecto propuesta</description>
+    <modules>
+        <module>spm-model</module>
+        <module>spm-manager</module>
+    </modules>
+    <properties>
+        <ejb.version>3.2</ejb.version>
+        <javaee.version>7.0</javaee.version>
+        <maven.compiler.plugin.version>3.6.0</maven.compiler.plugin.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <maven.ejb.plugin.version>2.5.1</maven.ejb.plugin.version>
+        <maven.test.skip>true</maven.test.skip>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <common-maven-compile-plugin.version>1.1.7.14</common-maven-compile-plugin.version>
+        <wildfly.host>127.0.0.1</wildfly.host>
+        <wildfly.port>9990</wildfly.port>
+        <wildfly.skip>false</wildfly.skip>
+        <wildfly.version>2.0.2.Final</wildfly.version>
+        <framework-biz-api.version>1.3.5.0</framework-biz-api.version>
+        <framework-api.version>1.3.5.0</framework-api.version>
+        <framework-util.version>1.3.5.0</framework-util.version>
+        <framework-test-api.version>1.3.5.0</framework-test-api.version>
+        <framework-web-api.version>1.3.5.0</framework-web-api.version>
+        <propuesta-spm-tools.version>1.0.0</propuesta-spm-tools.version>
+        <propuesta-spm-model.version>1.0.0</propuesta-spm-model.version>
+        <propuesta-spm-manager-local.version>1.0.0.0</propuesta-spm-manager-local.version>
+        <propuesta-spm-manager-serv.version>1.0.0.0</propuesta-spm-manager-serv.version>
+        <propuesta-spm-manager-impl.version>1.0.0.0</propuesta-spm-manager-impl.version>       
+    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>bo.union.common.maven</groupId>
+                <artifactId>maven-compile-plugin</artifactId>
+                <version>${common-maven-compile-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <!--<goal>logo</goal>-->
+                            <goal>clean</goal>
+                            <goal>release</goal>
+                            <goal>processor</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <module>SPM</module>
+                    <!--<skipLicence>true</skipLicence>-->
+                    <skipFormat>true</skipFormat>
+                    <skipFindBug>true</skipFindBug>
+                    <openFindBug>true</openFindBug>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+
+
+

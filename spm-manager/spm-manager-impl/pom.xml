@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.propuesta.spm</groupId>
+        <artifactId>spm-manager</artifactId>
+        <version>1.0.0</version>
+    </parent>
+    <artifactId>spm-manager-impl</artifactId>
+    <version>1.0.0.0</version>
+    <packaging>ejb</packaging>
+    <name>propuesta-spm-manager-impl</name>
+    <description>spm manager implements service</description>
+    <dependencies>
+        <dependency>
+            <groupId>bo.union.framework</groupId>
+            <artifactId>framework-biz-api</artifactId>
+            <version>${framework-biz-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.propuesta.spm</groupId>
+            <artifactId>spm-manager-serv</artifactId>
+            <version>${propuesta-spm-manager-serv.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.propuesta.spm</groupId>
+            <artifactId>spm-manager-local</artifactId>
+            <version>${propuesta-spm-manager-local.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.propuesta.spm</groupId>
+            <artifactId>spm-model</artifactId>
+            <version>${propuesta-spm-model.version}</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+</project>
